@@ -29,7 +29,7 @@ public class ServiceRegistry {
     public ZooKeeper connection() {
         ZooKeeper zk = null;
         try {
-            new ZooKeeper(registryAddress, ZkConstants.ZK_SESSION_TIMEOUT, new Watcher() {
+            zk = new ZooKeeper(registryAddress, ZkConstants.ZK_SESSION_TIMEOUT, new Watcher() {
                 public void process(WatchedEvent watchedEvent) {
                     if (watchedEvent.getState() == Event.KeeperState.SyncConnected) {
                         countDownLatch.countDown();

@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <artifactId>dependence-manager</artifactId>
     <groupId>com.sr</groupId>
@@ -8,10 +8,10 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>rpc-client</artifactId>
+  <artifactId>appServer</artifactId>
   <packaging>jar</packaging>
 
-  <name>rpc-client</name>
+  <name>appServer</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -22,17 +22,30 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <scope>text</scope>
+      <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>com.sr</groupId>
       <artifactId>rpc-commons</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.sr</groupId>
+      <artifactId>rpc-server</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
     <dependency>
       <groupId>com.sr</groupId>
       <artifactId>zk-registry</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+
   </dependencies>
 </project>

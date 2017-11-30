@@ -31,4 +31,7 @@ public class RpcResponse {
     public void setException(Throwable exception) {
         this.exception = exception;
     }
+    public Boolean isError() {
+        return exception != null;
+    }
 }
